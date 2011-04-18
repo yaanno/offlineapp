@@ -1,0 +1,96 @@
+#app {
+    padding: 5px;
+}
+
+#navigation {
+    width: 35%;
+    float: left;
+}
+
+#navigation .inner {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#navigation li {
+    border-bottom: 1px solid #bbb;
+    -webkit-box-shadow: 0 1px 1px #fff;
+}
+
+#navigation li.active {
+    -webkit-box-shadow: none;
+}
+
+#navigation li.active a {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0090f7), to(#0068e8));
+    -webkit-background-origin: padding;
+    -webkit-background-clip: content;
+    color: #fff;
+    text-shadow: -1px -1px #333;
+}
+
+#navigation li a {
+    text-decoration: none;
+    color: #040404;
+    line-height: 36px;
+    display: inline-block;
+    width: 100%;
+    text-shadow: 1px 1px #f2f2f2;
+    text-indent: 2%;
+}
+
+/* top 0090f7 bottom 0068e8*/
+
+#content-main {
+    width: 64%;
+    float: right;
+}
+
+.stuff-list > li {
+    margin: 5px 0;
+    border-bottom: 1px solid #bbb;
+    -webkit-box-shadow: 0 1px 1px #fff;
+}
+
+.stuff-list > li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+}
+
+.stuff-list > li:first-child {
+    margin-top: 0;
+}
+
+
+.stuff {
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.stuff .preview {
+    float: left;
+    margin-right: 10px;
+}
+
+.stuff-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#loading {
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    padding: 15px;
+    font-size: 24px;
+}
+
+#feedback {
+    color: #040404;
+    text-shadow: #f2f2f2 1px 1px;
+    padding: 5px 0;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html manifest="app.manifest">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>Offline Application</title>
+        <link rel="stylesheet" href="interface.css" type="text/css">
+        <link rel="stylesheet" href="app.css" type="text/css">
+    </head>
+    <body>
+        <div id="app" style="overflow:hidden">
+            
+            <!-- navigation panel -->
+            <nav id="navigation" class="panel">
+                <h2 class="rounded-top">Navigation</h2>
+                <div class="inner rounded-bottom">
+                    <ul>
+                        <li><a id="nav-stuff" href="#">Your stuff</a></li>
+                        <li><a id="nav-account" href="#">Your account</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- navigation panel -->
+            
+            <!-- content panel -->
+            <section id="content-main" class="panel">
+                <h2 id="content-main-title" class="rounded-top"><span id="content-title">Welcome</span> <span class="button rounded" id="content-action" style="display:none">Sync</span></h2>
+                <div class="inner rounded-bottom">
+                    
+                    <!-- feedback -->
+                    <div id="feedback" style="display:none"></div>
+                    <!-- feedback -->
+                    
+                    <div class="content rounded">
+                        <p>Welcome to the Offline App!</p>
+                    </div>
+                </div>
+            </section>
+            <!-- content panel -->
+            
+        </div>
+        
+        <!-- app version -->
+        <p style="color:#fff; width: 100%; text-align: center">
+            App Version: <span id="appversion"></span>
+        </p>
+        <!-- app version -->
+        
+        <!-- loading message -->
+        <div id="loading" class="rounded" style="display:none">
+            Loading content, please wait ...
+        </div>
+        <!-- loading message -->
+        
+        <!-- js templates -->
+        <textarea style="display:none" id="feedback-tpl">
+            <p>
+                ${message}
+            </p>
+        </textarea>
+        <!-- js templates -->
+        
+        <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jquery.templates.js" type="text/javascript" charset="utf-8"></script>
+        <script src="const.js" type="text/javascript" charset="utf-8"></script>
+        <script src="db.js" type="text/javascript" charset="utf-8"></script>
+        <script src="app.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                Db.init();
+                App.init();
+            });
+        </script>
+    </body>
+</html>

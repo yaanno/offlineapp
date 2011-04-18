@@ -1,0 +1,37 @@
+<?php
+
+if(!headers_sent()) {
+   header("Content-type:text/cache-manifest");
+}
+
+echo("CACHE MANIFEST\n");
+$id = uniqid();
+echo("# version: " . $id . "\n");
+
+// html
+echo("app.html\n");
+echo("_stuff.html\n");
+echo("_account.html\n");
+
+// styles
+echo("interface.css\n");
+echo("app.css\n");
+
+// js
+echo("jquery.js\n");
+echo("jquery.templates.js\n");
+echo("const.js\n");
+echo("db.js\n");
+echo("app.js\n");
+
+// images
+echo("app.png\n");
+
+// operations unpossible when offline
+echo("FALLBACK:\n");
+echo("/put/back/stuff #/offline\n");
+
+// apis, external resources
+echo("NETWORK:\n");
+echo("stuff.json\n");
+?>

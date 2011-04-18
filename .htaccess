@@ -1,0 +1,7 @@
+<Files *.manifest>
+    ExpiresActive On
+    ExpiresDefault "access"
+</Files>
+<Files *.json>
+    Header add Access-Control-Allow-Origin "*"
+</Files>
