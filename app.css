@@ -69,9 +69,13 @@
     padding: 5px 0;
 }
 
+.stuff .description p {
+    margin: .5em 0;
+}
+
 .stuff .preview {
     float: left;
-    margin-right: 10px;
+    margin: 0 10px 0;
 }
 
 .stuff-list a {
@@ -93,4 +97,13 @@
     color: #040404;
     text-shadow: #f2f2f2 1px 1px;
     padding: 5px 0;
+    text-align: center;
+}
+
+#account h3 {
+    margin-bottom: .7em;
+}
+
+#account li {
+    line-height: 1.3;
 }
