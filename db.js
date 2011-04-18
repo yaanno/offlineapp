@@ -1,6 +1,6 @@
 var Db = {
     
-    name : 'Prezi',
+    name : 'Stuffz',
     version : '1.0',
     description : 'Offline App Database',
     size: 50 * 1024 * 1024,

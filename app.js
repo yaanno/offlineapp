@@ -156,12 +156,12 @@ var App = {
             $(this.contentPanel).load('_account.html');
             
         } else if (tab === 'nav-stuff') {
-            // load prezi template to panel
+            // load stuff template to panel
             $(this.contentTitle).text(message.STUFF_TITLE);
             $(this.contentButton).text(message.SYNC_BTN).show();
             $(this.contentPanel).load('_stuff.html');
             
-            // load prezis from database
+            // load stuffz from database
             this.loadStuff();
         }
     },
@@ -231,7 +231,7 @@ var App = {
                 that.stuff = that.resultSetToArray(resultset);
                 that.renderStuff();
             } else {
-                // TODO: feedback to user to sync her prezis
+                // TODO: feedback to user to sync her stuffz
                 that.renderFeedback(message.SYNC);
             }
         });
@@ -256,7 +256,7 @@ var App = {
         
         // panel loaded, trigger content load
         $(window).bind('panelloaded', function (event, params) {
-            if (params.page === '_prezis.html') {
+            if (params.page === '_stuff.html') {
                 App.loadStuff();
             }
         });
@@ -285,7 +285,7 @@ var App = {
                     }
                 },
                 error: function (x, t, error) {
-                    // TODO: trigger local ajax error message and handle prezis render
+                    // TODO: trigger local ajax error message and handle stuff render
                     that.log(error);
                     that.loadStuff();
                 }
